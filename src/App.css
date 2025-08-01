@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -35,4 +35,71 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+.body-container{
+  display: flex;
 }
+
+.header-container{
+  display: flex;
+  justify-content: space-between;
+  width:100%;
+  height: auto;
+  background-color: whitesmoke;
+  padding: 10px;
+}
+
+.header-search{
+  display: flex;
+  justify-items:center;
+  padding: 10px;
+}
+
+.search-input{
+  width:500px;
+  border-top-left-radius: 16px;
+  border-bottom-left-radius: 16px;
+  border-color: black;
+  background-color: white;
+  margin-right: -5px;
+}
+
+.search-button{
+  width:10%;
+  border-top-right-radius: 16px;
+  border-bottom-right-radius: 16px;
+  color: white;
+}
+
+.search-input{
+padding-left: 20px  ;
+padding-right: 20px  ;
+}
+
+.search-icon{
+  height:15px
+}
+
+.search-button:hover{
+  background-color: rgb(230, 225, 225);
+}
+
+
+.app-logo{
+  width:50px;
+  height:50x;
+}
+
+.header-user{
+      display: flex;
+    align-items: center;
+
+}
+
+.user-logo{
+  width:50px;
+  height:50x;
+}
+
+
