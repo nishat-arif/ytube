@@ -3,20 +3,29 @@ import logo from '../assets/logo.png'
 import menuLogo from '../assets/menuLogo.png'
 import userIcon from '../assets/userIcon.png'
 import searchIcon from '../assets/searchIcon.png'
+import { useDispatch } from "react-redux";
+import { toggleSideMenu } from "../utils/appSlice"; // Adjust the path as needed
 
 
 const Header = () =>{
-    return(<div class="header-container">
 
-            <div  class="header-logo">
-            <img src={menuLogo} className="app-logo" alt="menu-logo" />
+    const dispatch = useDispatch();
+
+
+    const  handleMenuToggle = ()=>{
+        dispatch(toggleSideMenu())
+    }
+    return(<div className="header-container">
+
+            <div  className="header-logo">
+            <img src={menuLogo} className="menu-logo" alt="menu-logo"  onClick={handleMenuToggle}/>
             <img src={logo} className="app-logo" alt="app-logo" />
             </div>
-            <div class="header-search">
-                <input type="text" class="search-input"></input>  
-                <button class="search-button"><img src={searchIcon} class="search-icon" alt="search-logo" /></button>  
+            <div className="header-search">
+                <input type="text" className="search-input"></input>  
+                <button className="search-button"><img src={searchIcon} className="search-icon" alt="search-logo" /></button>  
             </div>
-            <div class="header-user">
+            <div className="header-user">
                 <img src={userIcon} className="user-logo" alt="user-logo" />     
             </div>
        

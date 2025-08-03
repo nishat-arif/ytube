@@ -85,6 +85,12 @@ padding-right: 20px  ;
   background-color: rgb(230, 225, 225);
 }
 
+.menu-logo{
+  width:50px;
+  height:50x;
+  cursor: pointer;
+}
+
 
 .app-logo{
   width:50px;
@@ -102,4 +108,49 @@ padding-right: 20px  ;
   height:50x;
 }
 
+.sidebar-container{
+display: flex;
+flex-direction: column;
+border-right: 1px solid rgb(242, 235, 235);
+padding:10px;
+margin:5px
+
+}
+
+.buttonlist-container{
+  display: flex;
+  margin: 5px;
+  gap:10px;
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+
+}
+
+.btnList{
+
+  background: rgb(235, 231, 231);
+  min-width:80px;
+  border-radius: 8px;
+  color: black;
+  padding:5px;
+  cursor :pointer;
+  align-content: center  ;
+  overflow-wrap: break-word;
+
+}
+
+.video-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.thumbnail{
+  width:250px;
+  height:200px;
+}
+
+.title-text{
+
+
+}
 

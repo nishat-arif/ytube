@@ -1,11 +1,19 @@
 import React from "react";
 import ButtonList from "./ButtonList";
 import VideoContainer from "./VideoContainer";
+import useVideoList from '../hooks/useVideoList'
+import { useSelector } from "react-redux";
 
 const MainContainer = () =>{
-    return(<div class="main-container">
+
+   useVideoList();
+
+   const videoListData = useSelector(store => store?.videoList?.videoListData)
+   
+   console.log(videoListData)
+    return(<div className="main-container">
         <ButtonList/>
-        <VideoContainer/>
+        <VideoContainer videoListData = {videoListData[0]}/>
     </div>)
 }
 
