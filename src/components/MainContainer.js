@@ -6,14 +6,14 @@ import { useSelector } from "react-redux";
 
 const MainContainer = () =>{
 
-   useVideoList();
+   //useVideoList();
 
-   const videoListData = useSelector(store => store?.videoList?.videoListData)
-   
-   console.log(videoListData)
+   //const videoListData = useSelector(store => store?.videoList?.videoListData)
+
+   //.log(videoListData)
     return(<div className="main-container">
         <ButtonList/>
-        <VideoContainer videoListData = {videoListData[0]}/>
+        {/* <VideoContainer videoListData = {videoListData[0]}/> */}
     </div>)
 }
 

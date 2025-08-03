@@ -19,7 +19,7 @@ const useVideoList = () =>{
     }
 
     useEffect(() => {
-        getVideoList();
+        //getVideoList();
     }, []);
 }
 
