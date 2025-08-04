@@ -39,6 +39,7 @@
 
 .body-container{
   display: flex;
+  width:100%;
 }
 
 .header-container{
@@ -122,7 +123,7 @@ margin:5px
   margin: 5px;
   gap:10px;
   flex-wrap: nowrap;
-  overflow-x: scroll;
+  /* overflow-x: scroll; */
 
 }
 
@@ -139,17 +140,34 @@ margin:5px
 
 }
 
+.main-container{
+  width :auto;
+}
+
 .video-container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap:wrap;
+  justify-content:space-evenly ;
+}
+
+.video-card{
+  margin: 5px;
+  /* padding:5px; */
 }
 
 .thumbnail{
   width:250px;
   height:200px;
+  border-radius: 5px;
 }
 
 .title-text{
+  font-size:large;
+  font-weight: bold;
+  padding: 2px;
+  margin:0px;
+  text-wrap: wrap;
 
 
 }

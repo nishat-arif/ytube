@@ -8,8 +8,8 @@ const ButtonList = () =>{
 
     return(<div className="buttonlist-container"> 
 
-    {btnList.map(btn=>
-        <button className="btnList">{btn}</button>
+    {btnList.map((btn , index)=>
+        <button key={index}className="btnList">{btn}</button>
     )}
 
         

@@ -1,10 +1,12 @@
-const VideoCard = (videoListData) => {
+const VideoCard = ({videoData}) => {
 
-    const { id , snippet , statistics} =  videoListData;
-    return (<div className="video-container" id={id}>
-        <img src= {snippet?.thumbnails?.medium?.url} alt="thumbnail" className="thumbnail"></img>
-        <p className="title-text">{snippet?.title}</p>
-        <span>{statistics?.viewCount} views</span>
+    const {snippet , statistics} =  videoData;
+    return (<div className="video-card">
+
+            <img src= {snippet?.thumbnails?.medium?.url} alt="thumbnail" className="thumbnail"></img>
+            <p className="title-text">{snippet?.channelTitle}</p>
+            <span>{statistics?.viewCount} views</span>
+
     </div>)
 
 }

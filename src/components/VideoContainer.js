@@ -1,11 +1,26 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import VideoCard from "./VideoCard";
 
-const VideoContainer = ({videoListData}) =>{
+import useVideoList from '../hooks/useVideoList'
+import { useSelector } from "react-redux";
+
+
+const VideoContainer = () =>{
+
+    useVideoList();
+
+   const videoListData = useSelector(store => store?.videoList?.videoListData)
+   console.log('videoListData' , videoListData) 
+
+
+   
+
 
     return(<div className="video-container">
-       <Link to='/watch'><VideoCard videoListData={videoListData}/></Link>
+
+        {videoListData && videoListData.map((video)=>
+            <VideoCard  key= {video.id} videoData = {video}/>
+        )}
     </div>)
 }
 
