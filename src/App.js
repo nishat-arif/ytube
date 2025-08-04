@@ -37,7 +37,6 @@ function App() {
         <div>
           <Header/>
           <RouterProvider router={appRouter}/>
-        <Body/>
       </div>
 
     </Provider>
