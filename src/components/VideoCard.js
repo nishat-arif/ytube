@@ -11,5 +11,13 @@ const VideoCard = ({videoData}) => {
 
 }
 
+export const MostViewedVideoCard = ({videoData})=>{
+
+    return (<div className="viewed-videocard"> 
+        <VideoCard videoData = {videoData}/>
+        <img src="https://www.iconpacks.net/icons/2/free-instagram-like-icon-3507-thumb.png" alt="likeIcon" className="like-icon"></img>
+    </div>)
+}
+
 export default VideoCard;
 
