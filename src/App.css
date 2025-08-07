@@ -175,3 +175,41 @@ width: 250px;
 
 }
 
+.watch-container{
+  display : flex;
+  flex-direction: column;
+}
+
+.watch-first{
+  display : flex;
+}
+
+
+.videoPlay-container{
+  margin:10px;
+  padding:5px;
+}
+
+.comments-container{
+
+    margin:10px;
+    padding:5px;
+
+}
+
+
+.sidebar-link{
+  color:black;
+  text-decoration: none;
+}
+
+.videocard-link{
+  color:black;
+  text-decoration: none;
+
+}
+
+.comments-heading{
+  font-weight: bold;
+  font-size: larger;
+}
