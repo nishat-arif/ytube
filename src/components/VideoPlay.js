@@ -1,7 +1,6 @@
 const VideoPlay = ({videoData}) => {
 
     const {id , snippet} = videoData
-    console.log("videoData", videoData)
 
     return (<div className="videoPlay-container">
                 <iframe width="750" 

@@ -1,6 +1,6 @@
 import Comment from './Comment';
 
-const Comments = () => {
+const CommentsContainer = () => {
 
     return (<div className="comments-container">
         <h4 className='comments-heading'>Comments</h4>
@@ -9,4 +9,4 @@ const Comments = () => {
 
 }
 
-export default Comments;
+export default CommentsContainer;

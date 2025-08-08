@@ -53,6 +53,7 @@
 
 .header-search{
   display: flex;
+  flex-direction: column;
   justify-items:center;
   padding: 10px;
 }
@@ -84,6 +85,33 @@ padding-right: 20px  ;
 
 .search-button:hover{
   background-color: rgb(230, 225, 225);
+}
+
+.search-box{
+  display: flex;
+  flex-direction: row;
+}
+
+.search-suggestions{
+
+  position: absolute;
+  top:50px;
+  background-color: white;
+  border-radius: 10px;
+  
+}
+
+.search-list{
+  list-style-type: none;
+  padding:5px;
+  margin:10px;
+  width:460px;
+  
+
+}
+
+.search-item{
+  padding:2px;
 }
 
 .menu-logo{

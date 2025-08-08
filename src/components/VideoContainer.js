@@ -17,7 +17,7 @@ const VideoContainer = () =>{
 
         {videoListData && videoListData.map((video)=>
             <Link to={"/watch?v=" + video.id} className="videocard-link">
-                {video?.statistics?.likeCount > '5000000'? <MostViewedVideoCard videoData = {video}/> : <VideoCard  key= {video.id} videoData = {video}/>}
+                {video?.statistics?.likeCount > '5000000'? <MostViewedVideoCard  key= {video.id} videoData = {video}/> : <VideoCard  key= {video.id} videoData = {video}/>}
             </Link>
         )}
     </div>)
