@@ -5,16 +5,17 @@ import VideoPlay from "./VideoPlay";
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { closeMenu } from "../utils/appSlice"; 
+import { addMessages } from '../utils/chatSlice';
 
 const Watch = () => {
-const dispatch = useDispatch();
+    const dispatch = useDispatch();
     const [params , setParams]= useSearchParams();
     const videoId = params.get('v')
 
 
 
     const videoList = useSelector(store => store?.videoList?.videoListData);
-    const [data ,setData] = useState(videoList);
+    const [liveChat ,setLiveChat] = useState('');
 
 
     const videoData = videoList?.filter(video => video.id === videoId)
@@ -26,12 +27,28 @@ const dispatch = useDispatch();
 
     },[])
 
+    const handleChatSubmit =(e)=>{
+        e.preventDefault();
+        dispatch(addMessages({
+                        name:"Nishat",
+                        message : liveChat
+                    }))
+    }
+
 
 
     return (<div className="watch-container">
         <div className="watch-first">
             <VideoPlay videoData = {videoData[0]}/>
-            <LiveChat/>
+            <div>
+                <LiveChat/>
+                <form className="chat-box"
+                onSubmit={handleChatSubmit}>
+                        <input className="input-chat" value={liveChat} onChange={(e)=>setLiveChat(e.target.value)}/>
+                        <button className="button-chat">Send</button>
+                </form>
+            </div>
+            
         </div>
         <div className="watch-second">
             <CommentsContainer/>

@@ -8,3 +8,5 @@ export const videoListUrl = "https://youtube.googleapis.com/youtube/v3/videos?pa
 export const searchApi = "http://suggestqueries.google.com/complete/search?client=youtube&ds=yt&client=firefox&q="
 
 export const CORS_PROXY  = "https://corsproxy.io/?" // to bypass CORS policy issue 
+
+export const liveChatCount = 10;
