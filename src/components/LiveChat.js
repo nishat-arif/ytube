@@ -19,7 +19,7 @@ const LiveChat = () => {
             }))
 
             
-        },2000)
+        },1500)
 
 
         return ()=>{clearInterval(timer)}
