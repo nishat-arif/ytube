@@ -6,7 +6,7 @@ import searchIcon from '../assets/searchIcon.png'
 import { useDispatch, useSelector } from "react-redux";
 import { toggleSideMenu} from "../utils/appSlice"; // Adjust the path as needed
 import {searchApi , CORS_PROXY} from "../utils/constants"
-import {cacheResults} from "../utils/searchSlice"
+import {cacheResults , setLRUCache} from "../utils/searchSlice"
 
 
 const Header = () =>{
@@ -22,8 +22,8 @@ const Header = () =>{
     useEffect(()=>{
         const getSearchSuggestions = setTimeout(()=>{
             
-            if (searchCache[searchQuery]) {
-                setSearchSuggestions(searchCache[searchQuery]);
+            if (searchCache.data[searchQuery]) {
+                setSearchSuggestions(searchCache.data[searchQuery]);
             } else {
                 getSearchResult();
             }},500)
@@ -39,10 +39,17 @@ const Header = () =>{
             setSearchSuggestions(json_data[1])
             
             // update cache
+            // dispatch(
+            // cacheResults({
+            //     [searchQuery]: json_data[1],
+            // })
+
             dispatch(
-            cacheResults({
+            setLRUCache({
                 [searchQuery]: json_data[1],
             })
+
+   
             );
             
     }
